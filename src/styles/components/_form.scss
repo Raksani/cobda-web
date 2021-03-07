@@ -6,15 +6,8 @@
   box-sizing: border-box;
   width: 100%;
 
-  @include respond-above('md') {
-    padding: 0 5%;
-  }
-
-  @include respond-above('lg') {
-    padding: 0 10%;
-  }
-
   &__header,
+  &__input-group,
   &__actionable {
     &:not(:last-child) {
       margin-bottom: rem(24px);
@@ -24,16 +17,29 @@
   &__input-section {
     display: flex;
     flex-direction: column;
+    gap: 10%;
+    padding-bottom: rem(32px);
 
     @include respond-above('md') {
       flex-direction: row;
     }
 
     &--upper {
+      border-bottom: solid 1px $silver;
+
+      @include respond-above('md') {
+        padding-bottom: 0;
+        border: none;
+      }
     }
 
     &--lower {
       flex-wrap: wrap;
+      padding-top: rem(24px);
+
+      @include respond-above('md') {
+        padding-top: 0;
+      }
     }
   }
 
@@ -53,11 +59,10 @@
 
   &__input-group {
     width: 100%;
-    margin-bottom: rem(24px);
 
     @include respond-above('md') {
-      width: 50%;
-    }    
+      width: 45%;
+    }
   }
 
   &__actionable {
@@ -85,7 +90,7 @@
     padding: rem(16px 96px);
     border-radius: rem(26px);
     margin: 0;
-    
+
     background-color: $dodger-blue;
     color: $light;
 
