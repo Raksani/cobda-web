@@ -1,4 +1,11 @@
 {
+  "signIn": "Sign In",
   "register": "REGISTER",
-  "personalDetails": "Personal Details"
+  "personalDetails": "Personal Details",
+  "alreadyHaveAccount": "Already have an account?",
+  "firstName": "First Name",
+  "surname": "Surname",
+  "username": "Username",
+  "email": "Email",
+  "password": "Password"
 }

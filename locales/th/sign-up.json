@@ -1,4 +1,11 @@
 {
-  "register": "สมัครสมาชิค",
-  "personalDetails": "ข้อมูลส่วนตัว"
+  "signIn": "เข้าสู่ระบบ",
+  "register": "สมัครสมาชิก",
+  "personalDetails": "ข้อมูลส่วนตัว",
+  "alreadyHaveAccount": "มีบัญชีผู้ใช้แล้ว?",
+  "firstName": "ชื่อจริง",
+  "surname": "นามสกุล",
+  "username": "ชื่อผู้ใช้",
+  "email": "อีเมล",
+  "password": "รหัสผ่าน"
 }
