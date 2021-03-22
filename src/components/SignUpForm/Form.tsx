@@ -19,11 +19,11 @@ const Form = () => {
         <h2 className="form__title">Sign up</h2>
       </header>
       <ProfileUpload />
-      <CommonField label="Username" inputType="text" isValueValid={true} />
-      <CommonField label="Email" inputType="email" isValueValid={true} />
-      <PasswordField label="Password" isValueValid={true} />
-      <CommonField label="First Name" inputType="text" isValueValid={true} />
-      <CommonField label="Surname" inputType="text" isValueValid={true} />
+      <CommonField label="Username" inputType="text" errorInput="Your username is being use." />
+      <CommonField label="Email" inputType="email" errorInput="Email is incorrect." />
+      <PasswordField label="Password" errorInput="Password should be at least 8 characters." />
+      <CommonField label="First Name" inputType="text" errorInput="Invalid input type." />
+      <CommonField label="Surname" inputType="text" errorInput="Invalid input type." />
       <div className="form__recaptcha">
         <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY!} />
       </div>

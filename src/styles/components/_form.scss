@@ -46,12 +46,6 @@
 
   &__group {
     width: 100%;
-
-    @include respond-above('md') {
-      &:last-child {
-        max-width: 50%;
-      }
-    }
   }
 
   &__input-group {
@@ -95,9 +89,9 @@
   }
 
   &__error {
+    margin-top: rem(6px);
     color: $coral-red;
     font-size: rem(14px);
-    margin-top: rem(6px);
   }
 
   &__eye-icon {

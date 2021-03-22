@@ -3,10 +3,10 @@ import React from 'react'
 interface CommonField {
   readonly label: string
   readonly inputType: any
-  readonly isValueValid?: boolean
+  readonly errorInput: string
 }
 
-const CommonField = ({ label, inputType, isValueValid }: CommonField) => {
+const CommonField = ({ label, inputType, errorInput }: CommonField) => {
   const renderValidInput = () => (
     <div className="form__input-group">
       <input
@@ -22,14 +22,14 @@ const CommonField = ({ label, inputType, isValueValid }: CommonField) => {
       <div className="form__input-group">
         <input type={inputType} className="form__input form__input--invalid" />
       </div>
-      <div className="form__error">sample</div>
+      <div className="form__error">{errorInput}</div>
     </>
   )
 
   return (
     <div className="form__group">
       <label className="form__input-label">{label}</label>
-      {isValueValid ? renderValidInput() : renderInvalidInput()}
+      {!errorInput ? renderValidInput() : renderInvalidInput()}
     </div>
   )
 }
