@@ -2,6 +2,10 @@
   box-sizing: border-box;
   padding: rem(24px);
 
+  @include respond-above('md') {
+    padding: 0;
+  }
+
   &__header,
   &__body {
     @include respond-above('md') {
@@ -9,14 +13,12 @@
     }
   }
 
-  &__header {
-    display: flex;
-    align-items: center;
+  &__body {
+    padding-top: rem(8px);
 
     @include respond-above('md') {
-      width: 30%;
-      padding: rem(24px) 0 0 rem(32px);
-      border-top-left-radius: rem(32px);
+      padding: rem(24px 32px);
+      border-radius: 0 0 rem(32px 32px);
     }
   }
 
@@ -31,12 +33,23 @@
     }
   }
 
-  &__body {
-    padding-top: rem(8px);
+  &__header {
+    display: flex;
+    align-items: center;
 
     @include respond-above('md') {
-      padding: rem(24px 32px);
-      border-radius: 0 0 rem(32px 32px);
+      width: rem(220px);
+      padding: rem(24px) 0 0 rem(32px);
+      border-top-left-radius: rem(32px);
+    }
+  }
+
+  &__subheader {
+    display: none;
+
+    @include respond-above('md') {
+      display: block;
+      margin-bottom: rem(24px);
     }
   }
 
@@ -52,15 +65,6 @@
     }
   }
 
-  &__subheader {
-    display: none;
-
-    @include respond-above('md') {
-      display: block;
-      margin-bottom: rem(24px);
-    }
-  }
-
   &__subtitle {
     all: unset;
 
@@ -73,8 +77,8 @@
 
   &__description {
     margin: 0;
-    color: $iron;
 
+    color: $iron;
     font-size: rem(20px);
     line-height: 1.3;
 

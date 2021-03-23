@@ -17,9 +17,13 @@
 
   & > div {
     border-radius: rem(9px);
-    margin-bottom: rem(16rem);
+    margin-bottom: rem(16px);
 
     background-color: $light;
+
+    @include respond-above('lg') {
+      margin-bottom: rem(48px);
+    }
   }
 
   & > .product-content__media {
